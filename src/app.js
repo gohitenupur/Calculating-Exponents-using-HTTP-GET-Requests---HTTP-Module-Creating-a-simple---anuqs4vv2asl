@@ -14,11 +14,11 @@ const server = http.createServer((req, res) => {
 
       // Write code here to calculate power of a number
       if (isNaN(value1) || value1 <= 0) {
-        return res.status(404).send("num1 must be a positive integer");
+        return res.status(404).send("${value1} must be a positive integer");
       }
 
       if (isNaN(value2) || value2 < 0) {
-        return res.status(400).send("num2 must be a non-negative integer");
+        return res.status(400).send("${value2} must be a non-negative integer");
       }
 
       const result = Math.pow(value1, value2);
